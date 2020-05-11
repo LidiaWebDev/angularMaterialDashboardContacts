@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <i class="material-icons">face</i>
   <button mat-button>Basic</button>
   
-  <mat-checkbox>Check me!</mat-checkbox>
+  <mat-checkbox>Check me!Now</mat-checkbox>
   `,
   styles: [
   ]
