@@ -4,24 +4,28 @@ import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { DemoModule} from './demo/demo.module'
+import { ContactmanagerModule } from './contactmanager/contactmanager.module';
+
 
 
 
 const routes: Routes = [
+  { path: 'contactmanager', loadChildren: './contactmanager/contactmanager.module#ContactmanagerModule' },
   { path: 'demo', loadChildren: './demo/demo.module#DemoModule' },
-  { path: '**', redirectTo: 'demo'}
-
+  { path: '**', redirectTo: 'contactmanager' }
 ];
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
+    
   ],
   imports: [
     BrowserModule,
-    DemoModule,
+    ContactmanagerModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
  
